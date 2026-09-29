@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/#categories', label: 'دسته‌بندی‌ها' },
   { href: '/company', label: 'پنل کارفرما' },
   { href: '/applicant', label: 'پنل کارجو' },
+  { href: '/marketplace/register', label: 'بازارچه شهرکار' },
 ]
 
 export function SiteHeader() {
