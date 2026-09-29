@@ -173,7 +173,9 @@ async function handleNotificationClick(
             notificationId: notification.id,
           }),
         });
-      } catch {}
+      } catch (error) {
+        console.error("MARKETPLACE_NOTIFICATION_READ_ERROR", error);
+      }
 
       setNotifications((items) =>
         items.map((item) =>
@@ -218,7 +220,9 @@ async function handleNotificationClick(
       setNotifications((items) =>
         items.filter((item) => item.id !== id)
       );
-    } catch {}
+    } catch (error) {
+      console.error("MARKETPLACE_NOTIFICATION_DELETE_ERROR", error);
+    }
   }
 
   async function handleDeleteAll() {
@@ -235,7 +239,9 @@ async function handleNotificationClick(
       }
 
       setNotifications([]);
-    } catch {}
+    } catch (error) {
+      console.error("MARKETPLACE_NOTIFICATION_DELETE_ALL_ERROR", error);
+    }
   }
 
   return (
